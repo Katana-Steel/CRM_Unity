@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>cell.png</file>
+        <file>fax.png</file>
+        <file>helhed.png</file>
+        <file>lst-arbejd.png</file>
+        <file>lst-konsign.png</file>
+        <file>lst-lordre.png</file>
+        <file>lst-mail.png</file>
+        <file>lst-ordre.png</file>
+        <file>lst-salgsmaal.png</file>
+        <file>lst-slettet.png</file>
+        <file>lst-tilbud.png</file>
+        <file>phone.png</file>
+    </qresource>
+</RCC>

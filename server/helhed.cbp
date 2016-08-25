@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="helhed" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="debug">
+				<Option output="bin/Debug/helhed" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="app.php" />
+		<Unit filename="app/config.xml" />
+		<Unit filename="app/index.php" />
+		<Unit filename="app/install.bck" />
+		<Unit filename="app/install.htm" />
+		<Unit filename="app/setup.bck" />
+		<Unit filename="html_mime_mail_2.5/RFC822.php" />
+		<Unit filename="html_mime_mail_2.5/htmlMimeMail.php" />
+		<Unit filename="html_mime_mail_2.5/mimePart.php" />
+		<Unit filename="html_mime_mail_2.5/smtp.php" />
+		<Unit filename="include/GetFK_OP.php" />
+		<Unit filename="include/UserControl.php" />
+		<Unit filename="include/chk_cid.php" />
+		<Unit filename="include/defaultMails.php" />
+		<Unit filename="include/dologin.php" />
+		<Unit filename="include/getOID.php" />
+		<Unit filename="include/include.php" />
+		<Unit filename="include/info_text.php" />
+		<Unit filename="include/killordm.php" />
+		<Unit filename="include/order_head.php" />
+		<Unit filename="include/page_bottom.php" />
+		<Unit filename="include/page_top.php" />
+		<Unit filename="include/preview_hid.php" />
+		<Unit filename="include/preview_id.php" />
+		<Unit filename="include/preview_sid.php" />
+		<Unit filename="include/preview_xls.php" />
+		<Unit filename="include/printm.php" />
+		<Unit filename="include/printp.php" />
+		<Unit filename="include/startdb.php" />
+		<Unit filename="include/xml.php" />
+		<Unit filename="include/xml_admin.php" />
+		<Unit filename="include/xml_admin_mailrule.php" />
+		<Unit filename="include/xml_admin_update.php" />
+		<Unit filename="include/xml_admin_user.php" />
+		<Unit filename="include/xml_create_jour.php" />
+		<Unit filename="include/xml_create_order.php" />
+		<Unit filename="include/xml_delivered.php" />
+		<Unit filename="include/xml_extra_mails.php" />
+		<Unit filename="include/xml_get_curlist.php" />
+		<Unit filename="include/xml_get_mails.php" />
+		<Unit filename="include/xml_get_print.php" />
+		<Unit filename="include/xml_get_temps.php" />
+		<Unit filename="include/xml_get_xls.php" />
+		<Unit filename="include/xml_gross_seek.php" />
+		<Unit filename="include/xml_k_seek.php" />
+		<Unit filename="include/xml_kill_ord.php" />
+		<Unit filename="include/xml_lvo.php" />
+		<Unit filename="include/xml_lvo_gdelete.php" />
+		<Unit filename="include/xml_lvo_grun.php" />
+		<Unit filename="include/xml_lvo_gupdate.php" />
+		<Unit filename="include/xml_lvo_sinsert.php" />
+		<Unit filename="include/xml_lvo_srun.php" />
+		<Unit filename="include/xml_reenable.php" />
+		<Unit filename="include/xml_rma.php" />
+		<Unit filename="include/xml_rma_getall.php" />
+		<Unit filename="include/xml_save_temp.php" />
+		<Unit filename="include/xml_stat_akt_tilbud.php" />
+		<Unit filename="include/xml_stat_list.php" />
+		<Unit filename="include/xml_stat_sogning.php" />
+		<Unit filename="include/xml_stat_stklist.php" />
+		<Unit filename="include/xml_stat_totsalg.php" />
+		<Unit filename="include/xml_statistics.php" />
+		<Unit filename="include/xml_toka.php" />
+		<Unit filename="include/xml_update_jour.php" />
+		<Unit filename="index.php" />
+		<Unit filename="info.php" />
+		<Unit filename="kunder_csv.php" />
+		<Unit filename="preview.php" />
+		<Unit filename="style/style.css" />
+		<Unit filename="theme/std/head.tpl" />
+		<Unit filename="unicode.php" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

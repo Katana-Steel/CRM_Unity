@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="debug" />
+	<File name="conn.cc" open="0" top="0" tabpos="0">
+		<Cursor position="1198" topLine="15" />
+	</File>
+	<File name="conn.h" open="0" top="0" tabpos="0">
+		<Cursor position="2140" topLine="29" />
+	</File>
+	<File name="mwin.cc" open="0" top="0" tabpos="0">
+		<Cursor position="1208" topLine="55" />
+	</File>
+	<File name="mwin.h" open="0" top="0" tabpos="0">
+		<Cursor position="407" topLine="0" />
+	</File>
+	<File name="net_test.pro" open="0" top="0" tabpos="0">
+		<Cursor position="309" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

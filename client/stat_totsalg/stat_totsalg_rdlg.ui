@@ -1,0 +1,253 @@
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>resultDlg</class>
+ <widget class="QWidget" name="resultDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>454</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Totalt salg per sælger</string>
+  </property>
+  <property name="layoutDirection" >
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>6</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" >
+       <property name="margin" >
+        <number>0</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType" >
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>80</width>
+             <height>22</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="salger" />
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label" >
+           <property name="sizePolicy" >
+            <sizepolicy>
+             <hsizetype>5</hsizetype>
+             <vsizetype>5</vsizetype>
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>80</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string>Total Salg:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="salg" >
+           <property name="alignment" >
+            <set>Qt::AlignRight</set>
+           </property>
+           <property name="readOnly" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_2" >
+           <property name="minimumSize" >
+            <size>
+             <width>80</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string>Total Bytte:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="bytte" >
+           <property name="alignment" >
+            <set>Qt::AlignRight</set>
+           </property>
+           <property name="readOnly" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_3" >
+           <property name="minimumSize" >
+            <size>
+             <width>80</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="text" >
+            <string>Totalt: </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="total" >
+           <property name="alignment" >
+            <set>Qt::AlignRight</set>
+           </property>
+           <property name="readOnly" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" >
+       <property name="margin" >
+        <number>0</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="closeFrm" >
+         <property name="text" >
+          <string>Luk</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType" >
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>20</width>
+           <height>80</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="prnLst" >
+         <property name="text" >
+          <string>Print List</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="order_list" >
+     <column>
+      <property name="text" >
+       <string>Ordre nr.</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Salg</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Bytte</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Totalt</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</ui>

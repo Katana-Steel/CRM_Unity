@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Helhed - Setup</title>
+</head>
+<body style="margin: 0px; font-family: monospace;">
+<?php
+// function prototype: setup();
+// TODO:
+// Create the setup page, requesting all the parameters for the install() function
+
+?><br />
+<?php echo page_top("Helhed - Setup",""); ?>
+<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post"><center>
+<table style="border: 0px solid black; margin: 5px; padding: 5px;">
+ <tr>
+  <td colspan="2">
+   Welcome to the server/client setup of Helhed please fill-out all these fields
+   all of which are needed for Helhed to run smoothly.<br/>
+   With this information the Install will create the server's database and the
+   database connection function for the server, as well as the clients configuration
+   xml file as its base.<br />
+   The client configuration can then be downloaded to be deployed along with the
+   client, a link will be provided here when the setup is complete.
+  </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="border-bottom: 1px dashed black;">Server Configuration</td>
+ </tr>
+ <tr>
+  <td style="width: 20%;">Database Username:</td>
+  <td><input type="text" name="dbuser" /></td>
+ </tr>
+ <tr>
+  <td>Database Password:</td>
+  <td><input type="text" name="dbpass" /></td>
+ </tr>
+ <tr>
+  <td>Database Name:</td>
+  <td><input type="text" name="dbname" /></td>
+ </tr>
+ <tr>
+  <td>Database Hostname:</td>
+  <td><input type="text" name="dbhost" /></td>
+ </tr>
+ <tr>
+  <td>Ftpuser Home Directory:</td>
+  <td><input type="text" name="ftphome" /></td>
+ </tr>
+ <tr>
+  <td>Admin Username:</td>
+  <td><input type="text" name="aduser" /></td>
+ </tr>
+ <tr>
+  <td>Admin Password:</td>
+  <td><input type="text" name="adpass" /></td>
+ </tr>
+ <tr>
+  <td>Dublicate server for development:</td>
+  <td><input type="checkbox" name="add_dev" value="1" /></td>
+ </tr>
+ <tr>
+  <td colspan="2" style="border-bottom: 1px dashed black;">Client Configuration</td>
+ </tr>
+ <tr>
+  <td>Server Address:</td>
+  <td><input type="text" name="server" value="<?php echo $_SERVER['SERVER_NAME']; ?>" /></td>
+ </tr>
+ <tr>
+  <td>Ftp Port:</td>
+  <td><input type="text" name="ftpprt" value="21" /></td>
+ </tr>
+ <tr>
+  <td>Ftp Username:</td>
+  <td><input type="text" name="ftpusr" /></td>
+ </tr>
+ <tr>
+  <td>Ftp Password:</td>
+  <td><input type="text" name="ftppas" /></td>
+ </tr>
+ <tr>
+  <td align="center" colspan="2"><input type="submit" value="Install" /></td>
+ </tr>
+</table></center>
+</form>
+<?php echo page_bottom();
+$ret = true;
+?>

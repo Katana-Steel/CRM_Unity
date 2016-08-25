@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="stat_sogning.cc" open="0" top="0" tabpos="0">
+		<Cursor position="1297" topLine="58" />
+	</File>
+	<File name="stat_sogning_dato.cc" open="0" top="0" tabpos="0">
+		<Cursor position="2061" topLine="63" />
+	</File>
+	<File name="stat_sogning_kunde.cc" open="0" top="0" tabpos="0">
+		<Cursor position="1890" topLine="45" />
+	</File>
+	<File name="stat_sogning_sdlg.cc" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="23" />
+	</File>
+</CodeBlocks_layout_file>

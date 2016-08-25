@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Helhed">
+		<Project filename="main/main.cbp" />
+		<Project filename="stat_tilb/stat_tilb.cbp" />
+		<Project filename="stat_sogning/stat_sogning.cbp" />
+		<Project filename="stat_totsalg/stat_totsalg.cbp" />
+		<Project filename="stat_stklist/stat_stklist.cbp" />
+		<Project filename="stat_changed/stat_changed.cbp" />
+		<Project filename="tab_admin/tab_admin.cbp" />
+		<Project filename="tab_infiles/tab_infiles.cbp" />
+		<Project filename="tab_rma/tab_rma.cbp" />
+		<Project filename="servcfg/servcfg.cbp" />
+		<Project filename="../web/helhed/helhed.cbp" />
+		<Project filename="net_test/net_test.cbp" />
+		<Project filename="../helhed-app/helhed/tab_infiles/tab_infiles.cbp" active="1" />
+	</Workspace>
+</CodeBlocks_workspace_file>

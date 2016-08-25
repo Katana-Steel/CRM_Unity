@@ -1,0 +1,92 @@
+html, body {
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	font-family: tahoma;
+	font-size: 11px;
+	color: rgb(50,15,15);
+	background: rgb(200,200,200);
+}
+
+table {
+    padding-top: 5px;
+}
+
+td.corner {
+	vertical-align: top;
+    width: 15px;
+    height: 15px;
+    max-width: 15px;
+    min-width: 15px;
+    max-height: 15px;
+    min-height: 15px;
+}
+
+td.outer {
+    background: rgb(0,80,190);
+}
+
+td.inner {
+    background: rgb(200,200,200);
+}
+
+circle.outer {
+    fill: rgb(0,80,190);
+}
+
+rect.outer {
+    fill: rgb(200,200,200);
+}
+
+rect.inner {
+    fill: rgb(0,80,190);
+}
+
+circle.inner {
+    fill: rgb(200,200,200);
+}
+
+.right-buff {
+    width: 15px;
+    max-width: 15px;
+    min-width: 15px;
+}
+
+td.menu {
+    padding-left: 5px;
+    min-width: 160px;
+    max-width: 160px;
+}
+
+.title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+	max-height: 30px;
+	height: 30px;
+    color: rgb(200,200,200);
+	padding-bottom: 20px;
+}
+
+.menu_link {
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.head {
+    text-align: center;
+    font-size: 16pt;
+    padding-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.link {
+	background-color: rgb(200,200,200);
+}
+
+.red {
+    color: red;
+}

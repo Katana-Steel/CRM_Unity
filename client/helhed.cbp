@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="helhed" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="helhed.exe" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Unit filename="include\conn.h" />
+		<Unit filename="include\k-j_data.h" />
+		<Unit filename="include\s_data.h" />
+		<Unit filename="include\st_data.h" />
+		<Unit filename="include\stat.h" />
+		<Unit filename="include\stat_interf.h" />
+		<Unit filename="main\about.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\conf_xml.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\config.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\conn.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\jour.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\jourview.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\login.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\main.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\mwin.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\newjour.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\salg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\stat.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\stat_dlg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\toka.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\xml_jour_hnd.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\xml_login_hnd.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\xml_sale_hnd.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\xml_stat_hnd.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\conf_xml.h" />
+		<Unit filename="main\config.h" />
+		<Unit filename="main\jourview.h" />
+		<Unit filename="main\login.h" />
+		<Unit filename="main\mwin.h" />
+		<Unit filename="main\newjour.h" />
+		<Unit filename="main\toka.h" />
+		<Unit filename="main\xml_c_handle.h" />
+		<Unit filename="stat_tilb\stat_tilb.h" />
+		<Unit filename="stat_tilb\stat_tilb_rdlg.h" />
+		<Unit filename="stat_tilb\stat_tilb_sdlg.h" />
+		<Unit filename="stat_tilb\stat_tilb_xml.h" />
+		<Unit filename="stat_tilb\stat_tilb.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_tilb\stat_tilb_rdlg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_tilb\stat_tilb_sdlg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_tilb\stat_tilb_xml.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\main.pro" />
+		<Unit filename="stat_tilb\stat_tilb.pro" />
+		<Unit filename="stat_totsalg\stat_totsalg.pro" />
+		<Unit filename="stat_totsalg\stat_totsalg_xml.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_totsalg\stat_totsalg_rdlg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_totsalg\stat_totsalg_sdlg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_totsalg\stat_totsalg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_totsalg\stat_totsalg_xml.h" />
+		<Unit filename="stat_totsalg\stat_totsalg_data.h" />
+		<Unit filename="stat_totsalg\stat_totsalg_rdlg.h" />
+		<Unit filename="stat_totsalg\stat_totsalg_sdlg.h" />
+		<Unit filename="stat_totsalg\stat_totsalg.h" />
+		<Unit filename="stat_sogning\stat_sogning.pro" />
+		<Unit filename="stat_sogning\stat_sogning.h" />
+		<Unit filename="stat_sogning\stat_sogning.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="todo" />
+		<Unit filename="stat_sogning\stat_sogning_sdlg.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_sogning\stat_sogning_sdlg.h" />
+		<Unit filename="servcfg\servcfg.pro" />
+		<Unit filename="servcfg\main.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="servcfg\mwin.h" />
+		<Unit filename="servcfg\mwin.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="servcfg\config.h" />
+		<Unit filename="servcfg\config.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_sogning\stat_sogning_xml.h" />
+		<Unit filename="stat_sogning\stat_sogning_xml.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="helhed.pro" />
+		<Unit filename="main\helhed.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_sogning\stat_sogning_dato.h" />
+		<Unit filename="stat_sogning\stat_sogning_kunde.h" />
+		<Unit filename="stat_sogning\stat_sogning_dato.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_sogning\stat_sogning_kunde.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_sogning\stat_sogning_data.h" />
+		<Unit filename="stat_totsalg\stat_dll.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_tilb\stat_dll.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="stat_sogning\stat_dll.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="include\tab_interf.h" />
+		<Unit filename="tab_admin\tab_admin.pro" />
+		<Unit filename="tab_admin\tab_dll.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="tab_admin\tab_admin.h" />
+		<Unit filename="tab_admin\tab_admin.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="main\helhed.qrc" />
+		<Unit filename="tab_admin\tab_admin_xml.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="tab_admin\tab_admin_xml.h" />
+		<Unit filename="tab_admin\tab_admin_data.h" />
+		<Unit filename="tab_infiles\tab_dll.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="tab_infiles\tab_infiles.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="tab_infiles\tab_infiles.h" />
+		<Unit filename="tab_infiles\tab_infiles_xml.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="tab_infiles\tab_infiles_xml.h" />
+		<Unit filename="tab_infiles\tab_infiles.pro" />
+		<Unit filename="tab_infiles\tab_infiles_fh.h" />
+		<Unit filename="tab_infiles\tab_infiles_fh.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="tab_infiles\tab_infiles_data.h" />
+		<Unit filename="main\s_data_list.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="include\browser.h" />
+		<Unit filename="main\browser.cc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

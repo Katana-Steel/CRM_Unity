@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tab_admin" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="$(#qt4.include)" />
+			<Add directory="$(#qt4.include)\QtCore" />
+			<Add directory="$(#qt4.include)\QtGui" />
+			<Add directory="$(#qt4.include)\QtXml" />
+			<Add directory="$(#qt4.include)\QtNetwork" />
+		</Compiler>
+		<Linker>
+			<Add library="QtCore4" />
+			<Add library="QtGui4" />
+			<Add library="QtXml4" />
+			<Add library="QtNetwork4" />
+			<Add directory="$(#qt4.lib)" />
+		</Linker>
+		<ExtraCommands>
+			<Add before="qmake" />
+			<Add after="del ..\release\tab_dll.o" />
+		</ExtraCommands>
+		<Unit filename="..\main\mainpage.dot" />
+		<Unit filename="..\tab_admin.doxy" />
+		<Unit filename="tab_admin.cc" />
+		<Unit filename="tab_admin.h" />
+		<Unit filename="tab_admin.pro" />
+		<Unit filename="tab_admin2.ui" />
+		<Unit filename="tab_admin_data.h" />
+		<Unit filename="tab_admin_xml.cc" />
+		<Unit filename="tab_admin_xml.h" />
+		<Unit filename="tab_dll.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+			</debugger>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="config.cc" open="0" top="0" tabpos="0">
+		<Cursor position="1411" topLine="23" />
+	</File>
+	<File name="config.h" open="0" top="0" tabpos="0">
+		<Cursor position="765" topLine="15" />
+	</File>
+	<File name="main.cc" open="0" top="0" tabpos="0">
+		<Cursor position="293" topLine="0" />
+	</File>
+	<File name="main.ui" open="0" top="0" tabpos="0">
+		<Cursor position="1518" topLine="42" />
+	</File>
+	<File name="mwin.cc" open="0" top="0" tabpos="0">
+		<Cursor position="3435" topLine="100" />
+	</File>
+	<File name="mwin.h" open="0" top="0" tabpos="0">
+		<Cursor position="323" topLine="2" />
+	</File>
+</CodeBlocks_layout_file>

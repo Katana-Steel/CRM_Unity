@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="../helhed.pro" open="0" top="0" tabpos="0">
+		<Cursor position="165" topLine="0" />
+	</File>
+	<File name="../include/conn.h" open="0" top="0" tabpos="1">
+		<Cursor position="2408" topLine="45" />
+	</File>
+	<File name="../include/s_data.h" open="0" top="0" tabpos="8">
+		<Cursor position="1163" topLine="12" />
+	</File>
+	<File name="../include/stat.h" open="0" top="0" tabpos="0">
+		<Cursor position="1528" topLine="29" />
+	</File>
+	<File name="../include/tab_interf.h" open="0" top="0" tabpos="0">
+		<Cursor position="2212" topLine="0" />
+	</File>
+	<File name="about.cc" open="0" top="0" tabpos="0">
+		<Cursor position="3450" topLine="39" />
+	</File>
+	<File name="conf_xml.h" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="9" />
+	</File>
+	<File name="config.cc" open="0" top="0" tabpos="5">
+		<Cursor position="2498" topLine="51" />
+	</File>
+	<File name="config.h" open="0" top="0" tabpos="6">
+		<Cursor position="1231" topLine="25" />
+	</File>
+	<File name="conn.cc" open="0" top="0" tabpos="1">
+		<Cursor position="2713" topLine="96" />
+	</File>
+	<File name="helhed.rc" open="0" top="0" tabpos="0">
+		<Cursor position="675" topLine="0" />
+	</File>
+	<File name="jour.cc" open="0" top="0" tabpos="0">
+		<Cursor position="12072" topLine="456" />
+	</File>
+	<File name="jour_help.cc" open="0" top="0" tabpos="0">
+		<Cursor position="822" topLine="0" />
+	</File>
+	<File name="jourview.cc" open="0" top="0" tabpos="0">
+		<Cursor position="821" topLine="0" />
+	</File>
+	<File name="login.cc" open="0" top="0" tabpos="6">
+		<Cursor position="2356" topLine="73" />
+	</File>
+	<File name="login.h" open="0" top="0" tabpos="0">
+		<Cursor position="1761" topLine="39" />
+	</File>
+	<File name="main.cc" open="0" top="0" tabpos="4">
+		<Cursor position="1481" topLine="92" />
+	</File>
+	<File name="main.pro" open="0" top="0" tabpos="2">
+		<Cursor position="302" topLine="0" />
+	</File>
+	<File name="mwin.cc" open="0" top="0" tabpos="7">
+		<Cursor position="12471" topLine="184" />
+	</File>
+	<File name="mwin.h" open="0" top="0" tabpos="4">
+		<Cursor position="2812" topLine="69" />
+	</File>
+	<File name="mwin.ui" open="0" top="0" tabpos="0">
+		<Cursor position="42242" topLine="1245" />
+	</File>
+	<File name="salg.cc" open="0" top="0" tabpos="0">
+		<Cursor position="28835" topLine="807" />
+	</File>
+	<File name="stat.cc" open="0" top="0" tabpos="0">
+		<Cursor position="2887" topLine="6" />
+	</File>
+	<File name="stat_dlg.cc" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="24" />
+	</File>
+	<File name="toka.cc" open="0" top="0" tabpos="0">
+		<Cursor position="8388" topLine="269" />
+	</File>
+	<File name="xml_c_handle.h" open="0" top="0" tabpos="4">
+		<Cursor position="2708" topLine="52" />
+	</File>
+	<File name="xml_jour_hnd.cc" open="0" top="0" tabpos="2">
+		<Cursor position="1458" topLine="9" />
+	</File>
+	<File name="xml_login_hnd.cc" open="0" top="0" tabpos="3">
+		<Cursor position="1410" topLine="13" />
+	</File>
+</CodeBlocks_layout_file>

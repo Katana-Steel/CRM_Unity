@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config>
+ <webhost>keenan.dk</webhost>
+ <apppath>/helhed/app.php</apppath>
+ <ftphost>mail.keenan.dk</ftphost>
+ <ftpport>21</ftpport>
+ <ftppath>/</ftppath>
+ <ftptmp>/tmp/</ftptmp>
+ <ftpuser>bhshel</ftpuser>
+ <ftppass>3oj25</ftppass>
+</config>

@@ -1,0 +1,434 @@
+<?php
+// reminder:
+// function prototype: install($dbuser, $dbpass, $dbname, $dbhost, [ $admin_user, $admin_pass ] );
+// TODO:
+// write the include/startdb.php (perhaps even the dinclude/startdb.htm, or at least copy it there)
+// !doing...! manually creating $link and write startdb later...
+
+// !done ! create an Admin accout, either a randomly generated one, or one from user input
+
+// !done by index.php -->! delete it self when complete
+    $link = mysql_connect($dbhost,$dbuser,$dbpass);
+
+    if(!$link) {
+        die("no mysql connection:" . mysql_error());
+        return $ret;
+    }
+    $auser = $admin_user;
+    $apass = $admin_pass;
+
+    if($admin_user == "") {
+        srand(time(0));
+        $auser = "adm" . rand(0,9);
+        for($i=0;$i < 4;$i++)
+            $apass .= rand(0,9);
+    }
+
+    $sqls = array(
+    "DROP DATABASE if exists `${dbname}`;",
+    "CREATE DATABASE `${dbname}`;",
+    "USE `${dbname}`;",
+
+    "CREATE TABLE Act_Conn (
+      id int(10) unsigned NOT NULL auto_increment,
+      cid varchar(15) NOT NULL default '',
+      valid tinyint(1) NOT NULL default '0',
+      user varchar(100) NOT NULL default '',
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE Bruger (
+      brugernavn varchar(100) NOT NULL default '',
+      pass varchar(100) NOT NULL default '',
+      brugernr int(2) NOT NULL default '0',
+      tokalvl int(2) default NULL,
+      fnavn varchar(100) NOT NULL default '',
+      enavn varchar(100) NOT NULL default '',
+      tlf varchar(100) NOT NULL default '',
+      mobil varchar(100) default '',
+      mail varchar(100) default '',
+      PRIMARY KEY  (brugernavn)
+    ) TYPE=MyISAM;",
+
+    "INSERT into Bruger
+     (brugernavn, pass, brugernr,tokalvl)
+     values ('${auser}','".crypt($apass)."',10,10);",
+
+    "CREATE TABLE Extra_Data (
+      id int(20) unsigned NOT NULL auto_increment,
+      tilbud_nr int(11) NOT NULL default '0',
+      lev_kunde text,
+      bemark text,
+      PRIMARY KEY  (id),
+      UNIQUE KEY (tilbud_nr)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE `K-tilbud` (
+      linie_nr int(100) unsigned NOT NULL auto_increment,
+      tilbud_nr int(10) unsigned NOT NULL default '0',
+      type enum('T','O','K','A','S','X') default NULL,
+      lev tinyint(1) NOT NULL default '0',
+      reknr varchar(10) default '',
+      kunde_nr varchar(100) NOT NULL default '',
+      vare_nr varchar(100) default '',
+      varetekst varchar(100) default '',
+      stk int(5) default '0',
+      pris double(8,2) default '0.00',
+      rabat decimal(5,2) default '0.00',
+      dato date default '2000-00-00',
+      bemaerk text,
+      lev_kunde text,
+      tilstand varchar(100) default '',
+      usr int(2) unsigned NOT NULL default '0',
+      PRIMARY KEY  (linie_nr)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE K_Sager (
+      id int(10) unsigned NOT NULL auto_increment,
+      sagnr int(11) NOT NULL default '0',
+      beskriv varchar(100) NOT NULL default '',
+      pris double(8,2) NOT NULL default '0.00',
+      PRIMARY KEY  (id),
+      UNIQUE KEY (sagnr)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE K_notat (
+      notat_id int(20) unsigned NOT NULL auto_increment,
+      titel varchar(100) NOT NULL default '',
+      tekst text NOT NULL,
+      k_id varchar(100) NOT NULL default '',
+      dato date NOT NULL default '2000-00-00',
+      ndato date default '2000-00-00',
+      saelger_id varchar(100) NOT NULL default '',
+      bruger varchar(100) default '',
+      lukke_pro int(2) default '0',
+      status enum('I','A') default 'I',
+      lev enum('I','A') NOT NULL default 'I',
+      internal_msg text,
+      tilbud_nr int(11) default '0',
+      tilbud_type enum('T','O','K','A','S','X') default NULL,
+      PRIMARY KEY  (notat_id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE Maskiner (
+      id int(10) unsigned NOT NULL auto_increment,
+      varenr varchar(100) NOT NULL default '',
+      sort int(4) unsigned default '9999',
+      varetekst varchar(100) default '',
+      pris decimal(8,2) default '0.00',
+      sidst_red date default '2000-01-01',
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE Skurv (
+      pri int(10) unsigned NOT NULL auto_increment,
+      line int(10) unsigned NOT NULL default '0',
+      id int(11) NOT NULL default '0',
+      vareid varchar(20) NOT NULL default '0',
+      varetext varchar(80) default NULL,
+      stk int(5) NOT NULL default '0',
+      rabat decimal(5,2) default '0.00',
+      type enum('T','O','K','A','S') default NULL,
+      pris decimal(8,2) default '0.00',
+      PRIMARY KEY  (pri)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE c_que (
+      id int(10) unsigned NOT NULL auto_increment,
+      knr varchar(100) NOT NULL default '',
+      name varchar(100) default NULL,
+      att varchar(100) default NULL,
+      adr varchar(100) NOT NULL default '',
+      post varchar(20) NOT NULL default '',
+      `by` varchar(60) NOT NULL default '',
+      land varchar(100) NOT NULL default '',
+      ean_se varchar(100) default NULL,
+      tlf varchar(15) default NULL,
+      fax varchar(15) default NULL,
+      cell varchar(15) default NULL,
+      PRIMARY KEY  (id),
+      UNIQUE KEY  (knr)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE calc (
+      id int(100) unsigned NOT NULL auto_increment,
+      tnr int(11) unsigned NOT NULL default '0',
+      type enum('T','O','K','A') NOT NULL default 'T',
+      ind_ud enum('S','SK','B','P','BK','SF','BF','K') NOT NULL default 'S',
+      value varchar(100) default '',
+      line int(11) unsigned default '0',
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE k_oplysning (
+      k_id varchar(100) NOT NULL default '',
+      malke_k int(4) default '0',
+      gold_k int(4) default '0',
+      amme_k int(4) default '0',
+      slagte_k int(4) default '0',
+      fede_kalve int(4) default '0',
+      faar int(4) default '0',
+      andre varchar(100) default '',
+      andre2 varchar(100) default '',
+      dyrket_areal int(5) default '0',
+      grovfoder varchar(100) default '',
+      grovfoder1 varchar(100) default '',
+      grovfoder2 varchar(100) default '',
+      korn varchar(100) default '',
+      korn1 varchar(100) default '',
+      forrige_f_sy varchar(100) default '',
+      forrige_f_ma varchar(100) default '',
+      extra varchar(100) default '',
+      extra1 varchar(100) default '',
+      extra2 varchar(100) default '',
+      PRIMARY KEY  (k_id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE kunde (
+      id int(10) unsigned NOT NULL auto_increment,
+      kundenr varchar(100) NOT NULL default '',
+      firma varchar(100) default '',
+      navn varchar(100) NOT NULL default '',
+      adresse varchar(100) NOT NULL default '',
+      post varchar(10) NOT NULL default '0',
+      `by` varchar(100) NOT NULL default '',
+      tlf varchar(100) default '',
+      mobil varchar(100) default '',
+      fax varchar(100) default '',
+      oprette date NOT NULL default '0000-00-00',
+      mail varchar(100) default '',
+      bemark text,
+      EAN_SE varchar(100) default NULL,
+      land varchar(100) default 'Danmark',
+      PRIMARY KEY  (id),
+      UNIQUE KEY  (kundenr)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE lev_addr (
+      id int(11) unsigned NOT NULL auto_increment,
+      navn varchar(100) NOT NULL default '',
+      att varchar(100) NOT NULL default '',
+      adresse1 varchar(100) NOT NULL default '',
+      adresse2 varchar(100) default '',
+      post varchar(10) NOT NULL default '0',
+      `by` varchar(100) NOT NULL default '',
+      oid int(11) NOT NULL default '0',
+      PRIMARY KEY  (id),
+      UNIQUE KEY  (oid)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE mail_rules (
+      id int(10) unsigned NOT NULL auto_increment,
+      active tinyint(1) unsigned NOT NULL default '0',
+      type enum('T','O','K','A','S') NOT NULL default 'T',
+      conditions varchar(10) NOT NULL default '',
+      test_var varchar(50) default NULL,
+      maillist varchar(200) NOT NULL default '',
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE multi_search (
+      `key` int(50) unsigned NOT NULL auto_increment,
+      `id` varchar(100) NOT NULL default '',
+      `sql` text NOT NULL,
+      PRIMARY KEY  (`key`)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE nye_Sager (
+      id int(10) unsigned NOT NULL auto_increment,
+      type enum('S','H') default NULL,
+      tidx int(10) unsigned default NULL,
+      vnr varchar(100) default NULL,
+      sagnr int(11) unsigned default NULL,
+      beskriv varchar(100) default NULL,
+      pris double(8,2) default NULL,
+      PRIMARY KEY  (id),
+      UNIQUE KEY  (sagnr)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE preview (
+      `key` int(50) unsigned NOT NULL auto_increment,
+      id varchar(100) NOT NULL default '',
+      onr int(15) NOT NULL default '0',
+      PRIMARY KEY  (`key`)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE rma_data (
+      id int(10) unsigned NOT NULL auto_increment,
+      dato datetime NOT NULL default '2000-01-01 00:00:01',
+      rma_nr int(10) unsigned NOT NULL default '0',
+      msg text NOT NULL,
+      type enum('I','K','V') NOT NULL default 'I',
+      sid varchar(45) default NULL,
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE rma_info (
+      id int(10) unsigned NOT NULL auto_increment,
+      k_id int(8) unsigned NOT NULL default '0',
+      onr int(11) unsigned NOT NULL default '0',
+      dato datetime NOT NULL default '0000-00-00 00:00:00',
+      v_nr varchar(100) NOT NULL default '',
+      v_txt varchar(100) NOT NULL default '',
+      v_stk double(6,2) NOT NULL default '0.00',
+      v_pris double(11,2) unsigned NOT NULL default '0.00',
+      e_dato datetime default NULL,
+      ev_nr varchar(100) default NULL,
+      ev_txt varchar(100) default NULL,
+      ev_stk double(6,2) default NULL,
+      ev_pris double(11,2) unsigned default NULL,
+      email varchar(100) default NULL,
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE stat_list (
+      id int(100) unsigned NOT NULL auto_increment,
+      uid varchar(50) NOT NULL default '',
+      sid varchar(10) NOT NULL default '',
+      `to` varchar(100) NOT NULL default '',
+      `from` varchar(100) NOT NULL default '',
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE tmp_files (
+      id int(100) unsigned NOT NULL auto_increment,
+      `user` varchar(10) NOT NULL default '',
+      title varchar(100) NOT NULL default '',
+      file varchar(100) NOT NULL default '',
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;",
+
+    "CREATE TABLE used_mails (
+      id int(10) unsigned NOT NULL auto_increment,
+      `user` varchar(100) NOT NULL default '',
+      mail varchar(100) NOT NULL default '',
+      times int(100) unsigned NOT NULL default '0',
+      PRIMARY KEY  (id)
+    ) TYPE=MyISAM;"
+    );
+
+        echo "<!--\n";
+    foreach($sqls as $sql)
+    {
+     echo "--\n" . $sql . "\n\n";
+     if(!mysql_query($sql,$link)) { echo mysql_error() ."\n"; break; }
+    }
+    echo "-->\n";
+
+    mysql_close($link);
+
+    $ret = true;
+
+    $web = $_POST['server'];
+    list($server, $webport) = explode(':',$web);
+
+    $ftpport = $_POST['ftpprt'];
+
+    $app_path = str_replace($_SERVER['DOCUMENT_ROOT'],"",$_SERVER['SCRIPT_FILENAME']);
+    $app_path = str_replace("index.", "app.", $app_path);
+    $ssl = "0";
+    if($_SERVER["HTTPS"]) $ssl = "1";
+
+    $startdb_file = "<?php
+/* Autogenerated file from the Helhed installation */
+
+\$cust_table = \"kunde\";
+\$database = \"${dbname}\";
+\$failed = false;
+\$order_path = \"${ftp_path}\";
+
+function set_failed(\$link) {
+    global \$failed;
+    \$failed = true;
+    mysql_close(\$link);
+    return -1;
+}
+
+function dbcon()
+{
+	global \$database, \$failed;
+	\$link = mysql_connect(\"${dbhost}\",\"${dbuser}\",\"${dbpass}\") or die(\"connect... \". mysql_errno() .\":\". mysql_error());
+	mysql_select_db(\$database,\$link) or set_failed(\$link);
+	if(\$failed) { \$link = -1; \$failed = false; }
+	return \$link;
+}
+?>";
+
+    $xml_conf = "<?xml version=\"1.0\" ?>
+<config>
+ <webhost>${web}</webhost>
+ <apppath>${app_path}</apppath>
+ <ssl>${ssl}</ssl>
+ <ftphost>${server}</ftphost>
+ <ftpport>${ftpport}</ftpport>
+ <ftppath>/</ftppath>
+ <ftptmp>/tmp/</ftptmp>
+ <ftpuser>".$_POST['ftpusr']."</ftpuser>
+ <ftppass>".$_POST['ftppas']."</ftppass>
+ <font_size>12</font_size>
+</config>
+    ";
+
+    $file = fopen("include/startdb.php","w+");
+    fwrite($file, $startdb_file);
+    fclose($file);
+
+    $file = fopen("app/config.xml","w+");
+    fwrite($file, $xml_conf);
+    fclose($file);
+    if($_POST["add_dev"]) {
+        // if we are to create a dev env.
+        mkdir("dinclude");
+        $inc = opendir("include");
+        while(false !== ($file = readdir($inc))) {
+            if(is_dir("include/". $file) || $file == "." || $file == "..") continue;
+            copy("include/".$file,"dinclude/".$file);
+        }
+        $dev_funcs = file_get_contents("dinclude/include.php");
+        $dev_funcs = str_replace("include/","dinclude/", $dev_funcs);
+        file_put_contents("dinclude/include.php",$dev_funcs);
+        $dev_funcs = file_get_contents("app.php");
+        $dev_funcs = str_replace("include/","dinclude/", $dev_funcs);
+        file_put_contents("dev.php",$dev_funcs);
+        $dev_path = str_replace("app.php","dev.php", $app_path);
+        $xml_conf = "<?xml version=\"1.0\" ?>
+<config>
+ <webhost>${web}</webhost>
+ <apppath>${dev_path}</apppath>
+ <ssl>${ssl}</ssl>
+ <ftphost>${server}</ftphost>
+ <ftpport>${ftpport}</ftpport>
+ <ftppath>/</ftppath>
+ <ftptmp>/tmp/</ftptmp>
+ <ftpuser>".$_POST['ftpusr']."</ftpuser>
+ <ftppass>".$_POST['ftppas']."</ftppass>
+ <font_size>12</font_size>
+</config>
+";
+        $file = fopen("app/dev_config.xml","w+");
+        fwrite($file, $xml_conf);
+        fclose($file);
+    }
+?>
+<html>
+<head>
+<title>Helhed - Install</title>
+</head>
+<body style="margin: 0px;">
+<?php
+    echo page_top("Helhed - Install","");
+?>
+Congratulation, Install has been completed and<br />
+a new <a href="app/config.xml">config.xml</a> file has been generated for you.<?php
+if($_POST["add_dev"]) {
+?><br />
+and a <a href="app/dev_config.xml">dev_config.xml</a> file has been generated for you.<br />
+This is to test the development part or your server, before merging it into production.<?php
+}
+if($admin_user == "") {
+?><br />
+your Admin user is: <?php echo $auser; ?><br />
+and her password is: <?php echo $apass; ?><?php
+}
+    echo page_bottom();
+?>

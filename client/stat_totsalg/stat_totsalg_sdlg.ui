@@ -1,0 +1,223 @@
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>totSalgFrm</class>
+ <widget class="QWidget" name="totSalgFrm" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>268</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>268</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="maximumSize" >
+   <size>
+    <width>268</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Total Salg</string>
+  </property>
+  <layout class="QHBoxLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" >
+       <property name="margin" >
+        <number>0</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType" >
+            <enum>QSizePolicy::Preferred</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="totSalgAllIndv" >
+           <property name="enabled" >
+            <bool>false</bool>
+           </property>
+           <property name="text" >
+            <string>Alle sælger</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_11" >
+           <property name="text" >
+            <string>Fra Dato</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="totSalgFrom" >
+           <property name="minimumSize" >
+            <size>
+             <width>113</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>113</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimumDate" >
+            <date>
+             <year>2005</year>
+             <month>1</month>
+             <day>1</day>
+            </date>
+           </property>
+           <property name="currentSection" >
+            <enum>QDateTimeEdit::MonthSection</enum>
+           </property>
+           <property name="displayFormat" >
+            <string>MMM-dd-yyyy</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_18" >
+           <property name="text" >
+            <string>Til Dato</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="totSalgTo" >
+           <property name="minimumSize" >
+            <size>
+             <width>113</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>113</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimumDate" >
+            <date>
+             <year>2005</year>
+             <month>1</month>
+             <day>1</day>
+            </date>
+           </property>
+           <property name="currentSection" >
+            <enum>QDateTimeEdit::MonthSection</enum>
+           </property>
+           <property name="displayFormat" >
+            <string>MMM-dd-yyyy</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" >
+       <property name="margin" >
+        <number>0</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="totSalg" >
+         <property name="text" >
+          <string>Hent</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType" >
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</ui>

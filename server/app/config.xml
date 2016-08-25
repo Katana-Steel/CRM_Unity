@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config>
+ <webhost>localhost</webhost>
+ <apppath>/unity/app.php</apppath>
+ <ssl>0</ssl>
+ <ftphost>localhost</ftphost>
+ <ftpport>21</ftpport>
+ <ftppath>/</ftppath>
+ <ftptmp>/tmp/</ftptmp>
+ <ftpuser>unity</ftpuser>
+ <ftppass>123456</ftppass>
+ <font_size>12</font_size>
+</config>

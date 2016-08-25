@@ -1,0 +1,81 @@
+ html {
+/*	color: #000000; */
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-shadow-color: #000000;
+	scrollbar-3dlight-color: #000000;
+	scrollbar-arrow-color: #000000;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-base-color: #FFFFFF;
+}
+body {
+	margin: 0px;
+}
+select {
+	border: solid 1px black;
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-shadow-color: #000000;
+	scrollbar-3dlight-color: #000000;
+	scrollbar-arrow-color: #000000;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-base-color: #FFFFFF;
+}
+textarea.bdr {
+	border: solid 1px black;
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-shadow-color: #000000;
+	scrollbar-3dlight-color: #000000;
+	scrollbar-arrow-color: #000000;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-base-color: #FFFFFF;
+}
+
+*.btn {
+	color: #000000;
+	font-weight: bold;
+	border: solid 1px black;
+	background-color: #FFFFFF;
+}
+
+table.bdrall {
+	border: solid 1px black;
+	font-size: 8pt;
+}
+
+*.bdrall {
+	border: solid 1px black;
+}
+
+*.bdrbr {
+	border-bottom: solid 1px black;
+	border-right: solid 1px black;
+}
+
+*.bdrb {
+	border-bottom: solid 1px black;
+}
+
+td.link {
+	text-decoration: underline;
+/*	letter-spacing: -0.1em; */
+	color: #0000FF;
+	cursor: pointer;
+}
+
+td.nolink {
+	text-decoration: none;
+	color: #000000;
+	cursor: default;
+	font-size: 8pt;
+}
+
+td.menu {
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+}

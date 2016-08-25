@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="qmake" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="..\plugins\qmake" prefix_auto="1" extension_auto="1" />
+				<Option object_output="..\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="..\install\qmake" prefix_auto="1" extension_auto="1" />
+				<Option object_output="..\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\cachekeys.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\mac\pbuilder_pbx.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\mac\pbuilder_pbx.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\makefile.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\makefile.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\makefiledeps.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\makefiledeps.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\metamakefile.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\metamakefile.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\projectgenerator.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\projectgenerator.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\unix\unixmake.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\unix\unixmake.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\unix\unixmake2.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\borland_bmake.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\borland_bmake.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\mingw_make.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\mingw_make.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_dsp.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_dsp.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_nmake.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_nmake.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_objectmodel.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_objectmodel.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_vcproj.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\msvc_vcproj.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\winmakefile.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\win32\winmakefile.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\xmloutput.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\generators\xmloutput.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\main.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\meta.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\meta.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\option.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\option.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\project.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\project.h" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\property.cpp" />
+		<Unit filename="..\..\..\..\..\Qt\4.3.2\qmake\property.h" />
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_port="" serial_baud="115200" ip_address="" ip_port="" additional_cmds="" />
+				</remote_debugging>
+			</debugger>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

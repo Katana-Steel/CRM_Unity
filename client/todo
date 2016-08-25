@@ -1,0 +1,23 @@
+"Statestik" module (server side/client side) // client side only need the server callback protocol
+                                             // and advanced display of the results.
+Tab plugin enabled (for 4.0)
+Admin plugin as a new tab (server side/client side)
+Multi Search plugin in progress (server side/client side)
+
+***Order Backup DB file (server side/client side) (for 3.14) in 3.14
+***Mail list of frequently used mails  (for 3.14) in 3.14
+'Mail preview (server side/client side)
+'Order preview (client side)
+
+Known bugs:
+1)
+First try to use toka to make a new offer/order aso.
+after completing an order will fail and do nothing,
+hench this is not a critacal failure.
+Work around)
+go back to the Customer data sheet and retry.
+
+2) in 3.14 solved (I hope) in 3.16
+in create order and save temp the uppercase versions
+of ∆ÿ≈ were not correctly converted to unicode and back
+making prints unreadable.

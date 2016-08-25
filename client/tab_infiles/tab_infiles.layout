@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="tab_infiles.cc" open="1" top="0" tabpos="1">
+		<Cursor position="14188" topLine="417" />
+	</File>
+	<File name="tab_infiles.h" open="0" top="0" tabpos="6">
+		<Cursor position="371" topLine="28" />
+	</File>
+	<File name="tab_infiles_data.h" open="0" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="tab_infiles_fh.cc" open="0" top="0" tabpos="1">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="tab_infiles_fh.h" open="0" top="0" tabpos="4">
+		<Cursor position="958" topLine="2" />
+	</File>
+	<File name="tab_infiles_xml.cc" open="1" top="0" tabpos="2">
+		<Cursor position="1730" topLine="23" />
+	</File>
+	<File name="tab_infiles_xml.h" open="0" top="0" tabpos="5">
+		<Cursor position="109" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
